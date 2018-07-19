@@ -1,0 +1,12 @@
+{
+  "name": "event-path-includes",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "repository": "git@github.com:codebryo/event-path-includes.git",
+  "author": "Roman Kuba <roman.kuba@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^23.3.0",
+    "lodash": "^4.17.10"
+  }
+}
