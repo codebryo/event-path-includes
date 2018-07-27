@@ -29,3 +29,26 @@ test('returns true if className is in the path', () => {
   }
   expect(eventPathIncludes(event, simpleClassMatch)).toBe(true)
 })
+
+test('returns false if no path is present', () => {
+  const event = {
+    path: [
+      createFakeNode({ className: 'some' }),
+      createFakeNode({ className: 'elements' }),
+      createFakeNode({ className: 'with' }),
+      createFakeNode({ className: 'no' }),
+      createFakeNode({ className: 'match' }),
+    ]
+  }
+  expect(eventPathIncludes(event, '.no-match')).toBe(false)
+})
+
+
+test('returns true if id is set', () => {
+  const event = {
+    path: [
+      createFakeNode({ id: 'custom' })
+    ]
+  }
+  expect(eventPathIncludes(event, simpleIdMatch)).toBe(true)
+})
